@@ -26,7 +26,6 @@ import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.t
                         >{daysGone}</span
                     > dager!
                 </h2>
-                <!-- <span class='pb-4 text-4xl font-bold justify-self-center self-end'>&darr;</span> -->
                 <div class='pb-4 text-4xl font-bold justify-self-center self-end'>
                     <svg width='75' height='75' stroke='firebrick'>
                         <circle
@@ -46,21 +45,29 @@ import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.t
             </section>
         </section>
         <section class='h-auto w-screen flex flex-col'>
-            <section class='p-5 basis-1/4 grid place-content-center bg-rose-900'>
+            <section class='p-3 bg-rose-900 text-rose-200'>
                 <h3
-                    class='text-center uppercase text-2xl md:text-4xl lg:text-8xl font-bold text-rose-200'
+                    class='p-2 text-center uppercase text-xl md:text-2xl lg:text-4xl font-bold text-rose-200'
                 >
-                    Her er ett hjerte for hver dag vi har vært gift!
+                    Her er ett hjerte for hvert år vi har vært gift!
                 </h3>
-                <DayHearts client:load />
+                <Hearts client:load />
             </section>
-            <section class='p-3 basis-3/4 bg-rose-200 text-rose-900'>
+            <section class='p-3 bg-rose-900 text-rose-200'>
                 <h3
-                    class='text-center uppercase text-2xl md:text-4xl lg:text-8xl font-bold text-rose-200'
+                    class='p-2 text-center uppercase text-xl md:text-2xl lg:text-4xl font-bold text-rose-200'
                 >
                     Her er ett hjerte for hver måned vi har vært gift!
                 </h3>
-                <MonthHearts client:load />
+                <MonthHearts client:idle />
+            </section>
+            <section class='p-5 grid place-content-center bg-rose-900'>
+                <h3
+                    class='p-2 text-center uppercase text-xl md:text-2xl lg:text-4xl font-bold text-rose-200'
+                >
+                    Her er ett hjerte for hver dag vi har vært gift!
+                </h3>
+                <DayHearts client:idle />
             </section>
         </section>
     </main>

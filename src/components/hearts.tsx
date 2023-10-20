@@ -6,13 +6,15 @@ const daysGone = Math.round(diff / msPerDay);
 const msPerMonth = 1000 * 60 * 60 * 24 * 30.44;
 const monthsGone = Math.floor(diff / msPerMonth);
 const yearsGone = Math.floor(monthsGone / 12);
+console.log(yearsGone)
 
-const Hearts = (daysGone) => {
-  let hearts = [];
-  for (let i = 0; i < daysGone; i++) {
-    hearts.push('❤️');s
+
+const Hearts = () => {
+  let hearts = '';
+  for (let i = 0; i < yearsGone; i++) {
+    hearts += '❤️';
   }
-  return hearts;
+  return <div className="text-9xl">{hearts}</div>;
 }
 
 const DayHearts = () => {
@@ -28,7 +30,7 @@ const MonthHearts = () => {
   for (let i = 0; i < monthsGone; i++) {
     hearts += '❤️';
   }
-  return <div>{hearts}</div>;
+  return <div className="text-5xl">{hearts}</div>;
 }
 
 export default Hearts;
