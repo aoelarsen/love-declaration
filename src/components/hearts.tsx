@@ -14,7 +14,7 @@ const Hearts = () => {
   for (let i = 0; i < yearsGone; i++) {
     hearts += '❤️';
   }
-  return <div className="text-9xl justify-self-center">{hearts}</div>;
+  return <div className="text-9xl justify-self-center text-center">{hearts}</div>;
 }
 
 const DayHearts = () => {
