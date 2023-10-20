@@ -1,6 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.tsx';
+import Hearts, {
+    daysGone,
+    DayHearts,
+    MonthHearts,
+    monthsGone,
+    yearsGone,
+} from '../components/hearts.tsx';
 ---
 
 <script></script>
@@ -22,10 +28,17 @@ import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.t
             </section>
             <section class='p-2 basis-2/5 w-full h-full grid bg-rose-200 text-rose-900'>
                 <h2 class='self-center text-center uppercase text-3xl md:text-6xl font-bold'>
-                    Kjære kjærestekona mi Nå har vi vært gift i <span class='gradient-text'
-                        >{daysGone}</span
-                    > dager!
+                    Kjære kjærestekona mi
                 </h2>
+                <ul class='p-2 justify-self-center text-lg md:text-2xl lg:text-4xl'>
+                    <li>
+                        Nå har vi vært gift i <span class='gradient-text'>{daysGone}</span> dager!
+                    </li>
+                    <li>
+                        Vi har vært gift i <span class='gradient-text'>{monthsGone}</span> måneder!
+                    </li>
+                    <li>Vi har vært gift i <span class='gradient-text'>{yearsGone}</span> år!</li>
+                </ul>
                 <div class='pb-4 text-4xl font-bold justify-self-center self-end'>
                     <svg width='75' height='75' stroke='firebrick'>
                         <circle
@@ -44,8 +57,8 @@ import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.t
                 </div>
             </section>
         </section>
-        <section class='h-auto w-screen flex flex-col'>
-            <section class='p-3 bg-rose-900 text-rose-200'>
+        <section class='h-auto w-screen grid grid-cols-1'>
+            <section class='p-2 py-10 grid place-content-center bg-rose-900 text-rose-200'>
                 <h3
                     class='p-2 text-center uppercase text-xl md:text-2xl lg:text-4xl font-bold text-rose-200'
                 >
@@ -53,7 +66,7 @@ import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.t
                 </h3>
                 <Hearts client:load />
             </section>
-            <section class='p-3 bg-rose-900 text-rose-200'>
+            <section class='p-2 py-10 grid place-content-center bg-rose-900 text-rose-200'>
                 <h3
                     class='p-2 text-center uppercase text-xl md:text-2xl lg:text-4xl font-bold text-rose-200'
                 >
@@ -61,7 +74,7 @@ import Hearts, { daysGone, DayHearts, MonthHearts } from '../components/hearts.t
                 </h3>
                 <MonthHearts client:idle />
             </section>
-            <section class='p-5 grid place-content-center bg-rose-900'>
+            <section class='p-2 py-10 grid place-content-center bg-rose-900'>
                 <h3
                     class='p-2 text-center uppercase text-xl md:text-2xl lg:text-4xl font-bold text-rose-200'
                 >

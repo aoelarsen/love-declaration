@@ -34,4 +34,4 @@ const MonthHearts = () => {
 }
 
 export default Hearts;
-export { DayHearts, MonthHearts, daysGone, monthsGone }
+export { DayHearts, MonthHearts, daysGone, monthsGone, yearsGone }
