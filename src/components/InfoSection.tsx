@@ -3,8 +3,8 @@ import { daysGone, monthsGone, yearsGone } from './hearts';
 
 const InfoSection = () => {
  return (
-    <section class='py-2 basis-3/5 w-full h-full grid bg-rose-200 text-rose-900'>
-        <h2 class='self-center text-center uppercase text-3xl md:text-6xl font-bold'>
+    <section class='py-2 basis-3/6 w-full h-full grid bg-rose-200 text-rose-900'>
+        <h2 class='text-center self-center w-full uppercase text-3xl md:text-6xl font-bold'>
             Kjære kjærestekona mi
         </h2>
         <ul class='py-2 justify-self-center text-lg md:text-xl lg:text-3xl'>
