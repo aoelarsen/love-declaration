@@ -4,10 +4,10 @@ import { daysGone, monthsGone, yearsGone } from './hearts';
 const InfoSection = () => {
  return (
     <section class='py-2 basis-3/6 w-full h-full grid bg-rose-200 text-rose-900'>
-        <h2 class='text-center self-center w-full uppercase text-3xl md:text-6xl font-bold'>
+        <h2 class='p-2 text-center self-center w-full uppercase text-3xl md:text-6xl font-bold'>
             Kjære kjærestekona mi
         </h2>
-        <ul class='py-2 justify-self-center text-lg md:text-xl lg:text-3xl'>
+        <ul class='p-2 justify-self-center text-lg md:text-xl lg:text-3xl'>
             <li>
                 Nå har vi vært gift i <span class='gradient-text'>{daysGone}</span> dager!
             </li>
@@ -16,7 +16,7 @@ const InfoSection = () => {
             </li>
             <li>Vi har vært gift i <span class='gradient-text'>{yearsGone}</span> år!</li>
         </ul>
-        <div class='pb-4 text-4xl font-bold justify-self-center self-center'>
+        <a href='#year-hearts' class='pb-4 text-4xl font-bold justify-self-center self-center'>
             <svg width='75' height='75' stroke='firebrick'>
                 <circle
                     cx='37.5'
@@ -30,7 +30,7 @@ const InfoSection = () => {
                     fill='firebrick'
                     stroke='firebrick'></path>
             </svg>
-        </div>
+        </a>
     </section>
 
  )

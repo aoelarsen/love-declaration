@@ -31,7 +31,7 @@ const DayHearts = () => {
   for (let i = 0; i < daysGone; i++) {
     hearts += '❤️';
   }
-  return <div className="text-center justify-self-center max-w-4xl">{hearts}</div>;
+  return <p className="text-center justify-self-center max-w-4xl">{hearts}</p>;
 }
 
 
