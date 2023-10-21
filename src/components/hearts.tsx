@@ -1,13 +1,14 @@
-const today = new Date();
-const datoGift = new Date('2018-10-13');
-const diff = today.getTime() - datoGift.getTime();
-const msPerDay = 1000 * 60 * 60 * 24;
-const daysGone = Math.round(diff / msPerDay);
-const msPerMonth = 1000 * 60 * 60 * 24 * 30.44;
-const monthsGone = Math.floor(diff / msPerMonth);
-const yearsGone = Math.floor(monthsGone / 12);
-console.log(yearsGone)
+import {DateTime} from 'luxon';
 
+const nowTime = DateTime.now();
+const marriedDate = DateTime.fromISO('2018-10-13T18:30:00', { zone: "Europe/Paris" });
+const diffYears = nowTime.diff(marriedDate, 'years', {conversionAccuracy: 'longterm'}).toObject();
+const diffMonths = nowTime.diff(marriedDate, 'months', {conversionAccuracy: 'longterm'}).toObject();
+const diffDays = nowTime.diff(marriedDate, 'days', {conversionAccuracy: 'longterm'}).toObject();
+
+const yearsGone = diffYears.years ? Number(diffYears.years.toFixed()) : 0;
+const monthsGone = diffMonths.months ? Number(diffMonths.months.toFixed()) : 0;
+const daysGone = diffDays.days ? Number(diffDays.days.toFixed()) : 0;
 
 const Hearts = () => {
   let hearts = '';
