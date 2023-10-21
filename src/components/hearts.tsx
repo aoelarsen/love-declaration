@@ -15,15 +15,7 @@ const Hearts = () => {
   for (let i = 0; i < yearsGone; i++) {
     hearts += '❤️';
   }
-  return <div className="text-9xl justify-self-center text-center">{hearts}</div>;
-}
-
-const DayHearts = () => {
-  let hearts = '';
-  for (let i = 0; i < daysGone; i++) {
-    hearts += '❤️';
-  }
-  return <div className="justify-self-center">{hearts}</div>;
+  return <p className="text-9xl text-center justify-self-center max-w-4xl">{hearts}</p>;
 }
 
 const MonthHearts = () => {
@@ -31,8 +23,17 @@ const MonthHearts = () => {
   for (let i = 0; i < monthsGone; i++) {
     hearts += '❤️';
   }
-  return <div className="text-5xl justify-self-center">{hearts}</div>;
+  return <p className="text-5xl text-center justify-self-center max-w-4xl">{hearts}</p>;
 }
+
+const DayHearts = () => {
+  let hearts = '';
+  for (let i = 0; i < daysGone; i++) {
+    hearts += '❤️';
+  }
+  return <div className="text-center justify-self-center max-w-4xl">{hearts}</div>;
+}
+
 
 export default Hearts;
 export { DayHearts, MonthHearts, daysGone, monthsGone, yearsGone }
