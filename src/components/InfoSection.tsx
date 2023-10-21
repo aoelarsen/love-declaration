@@ -16,7 +16,7 @@ const InfoSection = () => {
         </li>
         <li>Vi har vært gift i <span class='gradient-text'>{yearsGone}</span> år!</li>
     </ul>
-    <div class='pb-4 text-4xl font-bold justify-self-center self-end'>
+    <div class='pb-4 text-4xl font-bold justify-self-center self-center'>
         <svg width='75' height='75' stroke='firebrick'>
             <circle
                 cx='37.5'
